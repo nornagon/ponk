@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<title>Ponk</title>
+<style>
+.centerbox {
+  /* flexbox, por favor */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-pack: center;
+  -moz-box-align: center;
+
+  width: 100%;
+  height: 100%;
+  margin: 0; padding: 0;
+}
+body, html { width: 100%; height: 100%; padding: 0; margin: 0; }
+canvas {
+  box-shadow: 0 0 10px #777;
+  width: 800px;
+  height: 600px;
+}
+
+@font-face {
+    font-family: 'KongtextRegular';
+    src: url('assets/kongtext-webfont.eot');
+    src: url('assets/kongtext-webfont.eot?#iefix') format('embedded-opentype'),
+         url('assets/kongtext-webfont.woff') format('woff'),
+         url('assets/kongtext-webfont.ttf') format('truetype'),
+         url('assets/kongtext-webfont.svg#KongtextRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+  background-color: #eee;
+}
+</style>
+<div class='centerbox'><canvas></canvas></div>
+<script src="atom.js"></script>
+<script src='cp.js'></script>
+<script src="game.js"></script>
