@@ -161,6 +161,7 @@ atom.input.bind(atom.key.UP_ARROW, 'b1up');
 atom.input.bind(atom.key.DOWN_ARROW, 'b1down');
 atom.input.bind(atom.key.T, 'tie');
 atom.input.bind(atom.key.SPACE, 'begin');
+game = null;
 TitleScreen = (function() {
   __extends(TitleScreen, atom.Game);
   function TitleScreen() {
@@ -172,7 +173,6 @@ TitleScreen = (function() {
     if (atom.input.pressed('begin')) {
       this.stop();
       return setTimeout(function() {
-        var game;
         game = new Game;
         return game.run();
       }, 0);
@@ -196,7 +196,6 @@ TitleScreen = (function() {
   };
   return TitleScreen;
 })();
-game = null;
 game = new TitleScreen;
 game.run();
 window.onblur = function() {
