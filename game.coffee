@@ -137,6 +137,8 @@ atom.input.bind atom.key.DOWN_ARROW, 'b1down'
 atom.input.bind atom.key.T, 'tie'
 atom.input.bind atom.key.SPACE, 'begin'
 
+game = null
+
 class TitleScreen extends atom.Game
 	constructor: ->
 		super()
@@ -165,8 +167,6 @@ class TitleScreen extends atom.Game
 		ctx.font = '25px KongtextRegular'
 		ctx.fillText 'PRESS SPACE TO PLAY', 400, -200 if Math.floor(@time*3) % 2
 		ctx.restore()
-
-game = null
 
 game = new TitleScreen
 game.run()
